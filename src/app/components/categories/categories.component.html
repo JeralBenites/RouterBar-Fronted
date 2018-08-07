@@ -1,0 +1,44 @@
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label class="control-label" for="SelectVendedor">
+                            <span>Productos</span>
+                        </label>
+                        <input class="form-control " placeholder="Producto" type="text">
+                    </div>
+                    <div class="col">
+                        <div class="btn-group flex-wrap float-right" data-toggle="buttons">
+                            <input type="button" class="btn btn-secondary float-right mt-2" id="BtnBuscarProducto" value="Buscar">
+                            <input type="button" class="btn btn-secondary float-right mt-2" id="btnNuevoPresentacion" value="Presentacion">
+                            <input type="button" class="btn btn-secondary float-right mt-2" id="btnNuevoProducto" value="Producto">
+                            <input type="button" class="btn btn-secondary float-right mt-2" id="btnNuevoPresentacionProducto" value="Combo">
+                            <input type="button" class="btn btn-secondary float-right mt-2" id="BtnExcelProducto" value="Excel">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                
+                
+    <table class="display nowrap table table-hover table-striped table-bordered dataTable">
+            <thead class="thead-dark">
+              <tr>
+                <th>Nombre Categoria</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listaCategorias">
+                <td>{{ item.name }}</td>
+                <td>
+                  
+                  <button class="btn btn-outline-danger" >Desactivar</button>
+                  <button class="btn btn-outline-success" >Activar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+            </li>
+        </ul>
